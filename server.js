@@ -92,7 +92,8 @@ const departmentRoutes = require('./src/routes/department.routes');
 // const dashboardRoutes = require('.src/routes/');
 
 // connect to database
-const MONGODB_URI = 'mongodb://127.0.0.1:27017/hmris';
+// const MONGODB_URI = 'mongodb://127.0.0.1:27017/hmris';
+const MONGODB_URI = 'mongodb+srv://nazeef:nazeef123@cluster0.yflxqwa.mongodb.net/hrms?retryWrites=true&w=majority&appName=Cluster0';
 mongoose.connect(MONGODB_URI, {
   useNewUrlParser: true,
   useUnifiedTopology: true,
