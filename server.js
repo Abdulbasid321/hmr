@@ -109,7 +109,7 @@ const server = http.createServer(app);
 // Create socket.io server and attach it to the HTTP server
 const io = new Server(server, {
   cors: {
-    origin: ['http://localhost:3000', 'http://localhost:3001', "https://hmr-frontend-yvup.vercel.app"],
+    origin: ['http://localhost:3000', "https://hmr-frontend-yvup.vercel.app"],
     methods: ['GET', 'POST'],
     credentials: true,
   },
@@ -144,7 +144,7 @@ io.on('connection', (socket) => {
 app.use(express.json({ limit: '50mb' }));
 app.use(express.urlencoded({ limit: '50mb', extended: true }));
 app.use(cors({
-  origin: ['http://localhost:3000', 'http://localhost:3001'],
+  origin: ['http://localhost:3000', 'http://localhost:3001', "https://hmr-frontend-yvup.vercel.app"],
   credentials: true
 }));
 app.use(cookieParser());
