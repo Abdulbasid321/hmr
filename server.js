@@ -109,7 +109,7 @@ const server = http.createServer(app);
 // Create socket.io server and attach it to the HTTP server
 const io = new Server(server, {
   cors: {
-    origin: ['http://localhost:3000', 'http://localhost:3001'],
+    origin: ['http://localhost:3000', 'http://localhost:3001', "https://hmr-frontend-yvup.vercel.app/"],
     methods: ['GET', 'POST'],
     credentials: true,
   },
